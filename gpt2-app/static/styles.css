@@ -2,18 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 
 :root {
-  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --primary-gradient: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
   --bg-color: #f5f7fa;
   --chat-bg: #ffffff;
-  --user-msg-bg: #667eea;
+  --user-msg-bg: #ec4899;
   --user-msg-text: #ffffff;
   --bot-msg-bg: #f0f2f5;
   --bot-msg-text: #1a202c;
   --input-border: #e2e8f0;
   --text-main: #2d3748;
-  --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
-  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 * {
@@ -25,7 +25,7 @@
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   background: var(--bg-color);
-  background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+  background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -38,7 +38,7 @@ h1 {
   color: #fff;
   margin-bottom: 1.5rem;
   font-weight: 600;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   font-size: 2rem;
 }
 
@@ -111,7 +111,7 @@ main {
 }
 
 #prompt:focus {
-  border-color: #667eea;
+  border-color: #ec4899;
 }
 
 button {
@@ -139,12 +139,20 @@ button:active {
 #messages::-webkit-scrollbar {
   width: 6px;
 }
+
 #messages::-webkit-scrollbar-thumb {
-  background-color: rgba(0,0,0,0.1);
+  background-color: rgba(0, 0, 0, 0.1);
   border-radius: 3px;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
