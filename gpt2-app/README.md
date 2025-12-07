@@ -64,6 +64,10 @@ I chose to host a local LLM to demonstrate the capability of serving transformer
 
 ## 5) Results & Evaluation
 
+**Validation & Testing:**
+- **Manual Validation:** I verified the model's instruction-following capability by inputting specific prompts (e.g., "What is the capital of France?") and waiting for its response. This is demonstrated in the *Sample Output* section below.
+- **Smoke Testing:** Implemented a `/health` endpoint to perform automated health checks. Running `curl http://localhost:8000/health` returns `{"status": "ok"}`, verifying that the container and web server are responsive.
+
 **Sample Output:**
 ![Sample Output](assets/sample_output.png)
 
