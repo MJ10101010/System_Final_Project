@@ -1,8 +1,8 @@
 # System_Final_Project
 
 ## 1) Executive Summary
-**Problem:** Users need a simple, accessible interface to interact with a Large Language Model (LLM) for text generation and instruction following, without relying on complex external APIs or paid services.
-**Solution:** This project provides a containerized web application that hosts a fine-tuned GPT-2 model (`vicgalle/gpt2-open-instruct-v1`) locally. Users can input prompts via a polished, modern web interface and receive generated text responses in real-time.
+- **Problem:** Users need a simple, accessible interface to interact with a Large Language Model (LLM) for text generation and instruction following, without relying on complex external APIs or paid services.
+- **Solution:** This project provides a containerized web application that hosts a fine-tuned GPT-2 model (`vicgalle/gpt2-open-instruct-v1`) locally. Users can input prompts via a polished, modern web interface and receive generated text responses in real-time.
 
 ## 2) System Overview
 **Course Concepts:** 
@@ -16,10 +16,10 @@
 ![Architecture Diagram](assets/architecture.png)
 
 **Data/Models/Services:**
-- **Model:** `vicgalle/gpt2-open-instruct-v1` (derived from GPT-2, fine-tuned on Open Instruct dataset).
-- **Service:** FastAPI backend serving the model and static files.
+- **Model:** `vicgalle/gpt2-open-instruct-v1` (derived from GPT-2, fine-tuned on Open Instruct dataset)
+- **Service:** FastAPI backend serving the model and static files
 - **Frontend:** HTML
-*No private data or user-specific information is used
+- *No private data or user-specific information is used
 
 ## 3) How to Run (Local)
 ### Docker
@@ -49,8 +49,8 @@ I chose to host a local LLM to demonstrate the capability of serving transformer
 - *Larger LLMs:* Would exceed Docker image size limits and RAM constraints
 
 **Tradeoffs:**
-- *Performance vs. Quality:* GPT-2 is faster and lighter than Llama 3 but produces lower quality text.
-- *Complexity:* Running the model inside the app container is simpler than a separate inference server (e.g., TGI/vLLM) but scales poorly.
+- *Performance vs. Quality:* GPT-2 is faster and lighter than Llama 3 but produces lower quality text
+- *Complexity:* Running the model inside the app container is simpler than a separate inference server (e.g., TGI/vLLM) but scales poorly
 
 **Security & Privacy:**
 - No secrets stored in code
@@ -58,8 +58,8 @@ I chose to host a local LLM to demonstrate the capability of serving transformer
 - Input validation ensured non-empty prompts
 
 **Ops:**
-- Logs are output to stdout/stderr for Docker monitoring.
-- Scalability is limited by CPU inference speed (single worker).
+- Logs are output to stdout/stderr for Docker monitoring
+- Scalability is limited by CPU inference speed (single worker)
 
 ## 5) Results & Evaluation
 
@@ -67,9 +67,9 @@ I chose to host a local LLM to demonstrate the capability of serving transformer
 ![Sample Output](assets/sample_output.png)
 
 ## 6) What’s Next
-- **I plan to improve:**
-- GPU Acceleration
+**I plan to improve:**
 - Model Upgrade from GPT-2
+- GPU Acceleration
 - Chat History
 - Further embellish UI
 
