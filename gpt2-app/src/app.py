@@ -3,6 +3,7 @@ from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 import pathlib
+import os
 from transformers import AutoTokenizer, AutoModelForCausalLM
 import torch
 
@@ -24,8 +25,12 @@ class Prompt(BaseModel):
     text: str
 
 device = torch.device("cpu")
-tokenizer = AutoTokenizer.from_pretrained("vicgalle/gpt2-open-instruct-v1")
-model = AutoModelForCausalLM.from_pretrained("vicgalle/gpt2-open-instruct-v1").to(device)
+# Define the model name from environment variable or default
+MODEL_NAME = os.getenv("MODEL_NAME", "vicgalle/gpt2-open-instruct-v1")
+
+# Initialize model and tokenizer
+tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+model = AutoModelForCausalLM.from_pretrained(MODEL_NAME).to(device)
 
 def generate_text(prompt: str) -> str:
     inputs = tokenizer(prompt, return_tensors="pt").to(device)

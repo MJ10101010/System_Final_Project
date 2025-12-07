@@ -5,6 +5,7 @@ FROM python:3.10-slim
 WORKDIR /app
 
 ENV PYTHONUNBUFFERED=1
+ENV MODEL_NAME="vicgalle/gpt2-open-instruct-v1"
 
 # Copy dependency file
 COPY requirements.txt .

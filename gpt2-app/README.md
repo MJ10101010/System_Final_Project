@@ -60,6 +60,7 @@ I chose to host a local LLM to demonstrate the capability of serving transformer
 **Ops:**
 - Logs are output to stdout/stderr for Docker monitoring
 - Scalability is limited by CPU inference speed (single worker)
+- **Configuration:** Model selection matches via `MODEL_NAME` environment variable (Code Quality)
 
 ## 5) Results & Evaluation
 
