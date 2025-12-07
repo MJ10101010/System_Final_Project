@@ -2,7 +2,7 @@
 
 ## 1) Executive Summary
 - **Problem:** Users and students need a simple, accessible interface to explore and interact with a Large Language Model (LLM) for text generation and instruction following, without relying on complex external APIs or paid services.
-- **Solution:** This project creates a personal, private AI chat experience that allows users to interact with a smart language model directly on their own computer. Instead of connecting to a remote server or paid cloud service, the entire application—from the intelligent "brain" (a fine-tuned version of GPT-2) to the colorful user interface—is packaged together in a way that is easy to download and run. By bringing this technology down to the local level, it offers a hands-on way to explore how computers generate text and follow instructions, prioritizing data privacy and simplicity so that students and enthusiasts can understand the building blocks of modern AI without needing complex technical setups.
+- **Solution:** This project creates a personal, private AI chat experience that allows users to interact with a smart language model directly on their own computer. Instead of connecting to a remote server or paid cloud service, the entire application, from the intelligent "brain" (a fine-tuned version of GPT-2) to the colorful user interface, is packaged together in a way that is easy to download and run. By bringing this technology down to the local level, it offers a hands-on way to explore how computers generate text and follow instructions, prioritizing data privacy and simplicity so that students and enthusiasts can understand the building blocks of modern AI without needing complex technical setups.
 
 ## 2) System Overview
 **Course Concepts:** 
