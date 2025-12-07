@@ -54,6 +54,9 @@ We chose to host a local LLM to demonstrate the capability of serving transforme
 - Verified end-to-end flow: User Input -> Frontend -> FastAPI -> Model Inference -> Response.
 - Tested different prompts to confirm instruction-following capability.
 
+**Sample Output:**
+![Sample Output](assets/sample_output.png)
+
 **Performance Notes:**
 - Model download size: ~550MB.
 - Inference time: ~2-5 seconds per response on CPU.
