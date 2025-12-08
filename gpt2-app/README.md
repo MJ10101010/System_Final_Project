@@ -22,14 +22,21 @@
 - *No private data or user-specific information is used
 
 ## 3) How to Run (Local)
-### Docker
+### Docker Compose (Recommended)
+The easiest way to run the application is with Docker Compose, which handles building and running in one step.
+
+```bash
+docker-compose up --build
+```
+
+### Docker (Manual)
 
 ```bash
 # Build the container
 docker build -t gpt2-app:latest .
 
 # Run the container
-docker run -p 8000:5000 michellejar10/gpt2-app
+docker run -p 8000:5000 gpt2-app
 
 # Health check
 curl http://localhost:8000/health

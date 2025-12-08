@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true, theme: 'default', securityLevel: 'loose' });
+    </script>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: white;
+        }
+
+        .mermaid {
+            background: white;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mermaid">
+        graph TD
+        User[User Browser] -->|HTTP POST /api/generate| Container
+        subgraph Docker_App [Container: michellejar10/gpt2-app]
+        direction TB
+        App[FastAPI Backend] -->|Input| Model[GPT-2 Model]
+        Model -->|Generated Text| App
+        end
+        App -->|JSON Response| User
+    </div>
+</body>
+
+</html>

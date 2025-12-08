@@ -29,8 +29,11 @@ device = torch.device("cpu")
 MODEL_NAME = os.getenv("MODEL_NAME", "vicgalle/gpt2-open-instruct-v1")
 
 # Initialize model and tokenizer
+print(f"Loading tokenizer: {MODEL_NAME}...")
 tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+print(f"Loading model: {MODEL_NAME}...")
 model = AutoModelForCausalLM.from_pretrained(MODEL_NAME).to(device)
+print(f"Model loaded successfully.")
 
 def generate_text(prompt: str) -> str:
     inputs = tokenizer(prompt, return_tensors="pt").to(device)
